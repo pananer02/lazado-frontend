@@ -52,7 +52,7 @@ export default {
         }
     },
     created() {
-        let apiURL = 'http://localhost:4000/apiSB';
+        let apiURL = 'http://apilazado.app.ruk-com.cloud/apiSB';
         axios.get(apiURL).then(res => {
             this.Skateboards = res.data
         }).catch(error => {
@@ -61,7 +61,7 @@ export default {
     },
     methods: {
         deleteskateboard(id) {
-            let apiURL = `http://localhost:4000/apiSB/delete-skateboard/${id}`;
+            let apiURL = `http://apilazado.app.ruk-com.cloud/apiSB/delete-skateboard/${id}`;
             let indexOfArrayItem = this.Skateboards.findIndex(i => i._id === id);
             if (window.confirm("Do you really want to delete?")) {
                 axios.delete(apiURL).then(() => {

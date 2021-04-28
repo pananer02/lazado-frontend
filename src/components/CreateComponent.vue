@@ -41,7 +41,7 @@ export default {
     },
     methods: {
         handleSubmitForm() {
-            let apiURL = 'http://localhost:4000/apiUser/create-username';
+            let apiURL = 'http://apilazado.app.ruk-com.cloud/apiUser/create-username';
             axios.post(apiURL, this.username).then(() => {
                 this.$router.push('/');
                 this.username = {

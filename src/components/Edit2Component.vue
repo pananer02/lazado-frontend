@@ -46,7 +46,7 @@ export default {
         }
     },
     created() {
-        let apiURL = `http://localhost:4000/apiSB/edit-skateboard/${this.$route.params.id}`;
+        let apiURL = `http://apilazado.app.ruk-com.cloud/apiSB/edit-skateboard/${this.$route.params.id}`;
         axios.get(apiURL).then((res) => {
             this.skateboard = res.data
         })
@@ -58,7 +58,7 @@ export default {
             }else{
                 this.skateboard.status = "Available";
             }
-            let apiURL = `http://localhost:4000/apiSB/update-skateboard/${this.$route.params.id}`;
+            let apiURL = `http://apilazado.app.ruk-com.cloud/apiSB/update-skateboard/${this.$route.params.id}`;
             axios.put(apiURL, this.skateboard).then((res) => {
                 console.log(res);
                 this.$router.push('/view3')

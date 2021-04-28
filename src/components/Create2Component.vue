@@ -55,7 +55,7 @@ export default {
     },
     methods: {
         handleSubmitForm() {
-            let apiURL = 'http://localhost:4000/apiSB/create-skateboard';
+            let apiURL = 'http://apilazado.app.ruk-com.cloud/apiSB/create-skateboard';
             axios.post(apiURL, this.skateboard).then(() => {
                 this.$router.push('/view3');
                 this.skateboard = {

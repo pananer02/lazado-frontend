@@ -45,7 +45,7 @@ export default {
         }
     },
     created() {
-        let apiURL = 'http://localhost:4000/apiHistory';
+        let apiURL = 'http://apilazado.app.ruk-com.cloud/apiHistory';
         axios.get(apiURL).then(res => {
             this.historys = res.data
         }).catch(error => {
@@ -54,7 +54,7 @@ export default {
     },
     methods: {
         deletehistory(id) {
-            let apiURL = `http://localhost:4000/apiHistory/delete-history/${id}`;
+            let apiURL = `http://apilazado.app.ruk-com.cloud/apiHistory/delete-history/${id}`;
             let indexOfArrayItem = this.historys.findIndex(i => i._id === id);
             if (window.confirm("Do you really want to delete?")) {
                 axios.delete(apiURL).then(() => {

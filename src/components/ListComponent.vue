@@ -46,7 +46,7 @@ export default {
         }
     },
     created() {
-        let apiURL = 'http://localhost:4000/apiUser';
+        let apiURL = 'http://apilazado.app.ruk-com.cloud/apiUser';
         axios.get(apiURL).then(res => {
             this.Usernames = res.data
         }).catch(error => {
@@ -55,7 +55,7 @@ export default {
     },
     methods: {
         deleteUsername(id) {
-            let apiURL = `http://localhost:4000/apiUser/delete-username/${id}`;
+            let apiURL = `http://apilazado.app.ruk-com.cloud/apiUser/delete-username/${id}`;
             let indexOfArrayItem = this.Usernames.findIndex(i => i._id === id);
             if (window.confirm("Do you really want to delete?")) {
                 axios.delete(apiURL).then(() => {
