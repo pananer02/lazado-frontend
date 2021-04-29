@@ -42,7 +42,7 @@ export default {
        alert("ท่านได้ Login แล้ว");
       this.$router.push("/");
     }
-    let apiURL = "http://apilazado.app.ruk-com.cloud/api";
+    let apiURL = "http://apilazado.app.ruk-com.cloud/apiUser";
     axios
       .get(apiURL)
       .then((res) => {

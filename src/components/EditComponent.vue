@@ -34,14 +34,14 @@ export default {
         }
     },
     created() {
-        let apiURL = `http://apilazado.app.ruk-com.cloud/api/edit-username/${this.$route.params.id}`;
+        let apiURL = `http://apilazado.app.ruk-com.cloud/apiUser/edit-username/${this.$route.params.id}`;
         axios.get(apiURL).then((res) => {
             this.username = res.data
         })
     },
     methods: {
         handleUpdateForm() {
-            let apiURL = `http://apilazado.app.ruk-com.cloud/api/update-username/${this.$route.params.id}`;
+            let apiURL = `http://apilazado.app.ruk-com.cloud/apiUser/update-username/${this.$route.params.id}`;
             axios.put(apiURL, this.username).then((res) => {
                 console.log(res);
                 this.$router.push('/view')

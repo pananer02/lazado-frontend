@@ -59,7 +59,7 @@ export default {
         }
     },
     created() {
-        let apiURL = 'http://apilazado.app.ruk-com.cloud/api';
+        let apiURL = 'http://apilazado.app.ruk-com.cloud/apiSB';
         axios.get(apiURL).then(res => {
             this.Skateboards = res.data
         }).catch(error => {

@@ -41,10 +41,13 @@ export default {
     },
     methods: {
         handleSubmitForm() {
-            let apiURL = 'http://apilazado.app.ruk-com.cloud/api/create-username';
+            let apiURL = 'http://apilazado.app.ruk-com.cloud/apiUser/create-username';
             axios.post(apiURL, this.username).then(() => {
+
             alert("ลงทะเบียนเรียบร้อย")
             this.$router.push('/');
+            }).catch(error => {
+                console.log(error)
             })
         }
     }

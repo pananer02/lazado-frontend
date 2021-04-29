@@ -67,7 +67,7 @@ export default {
       alert("โปรดทำการ Login");
       this.$router.push("/Login");
     }
-    let apiURL = "http://apilazado.app.ruk-com.cloud/api";
+    let apiURL = "http://apilazado.app.ruk-com.cloud/apiSB";
     axios
       .get(apiURL)
       .then((res) => {
