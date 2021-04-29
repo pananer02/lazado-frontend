@@ -74,7 +74,7 @@ export default {
         }
     },
     created() {
-        let apiURL = `http://apilazado.app.ruk-com.cloud/apiSB/edit-skateboard/${this.$route.params.id}`;
+        let apiURL = `http://apilazado.app.ruk-com.cloud/api/edit-skateboard/${this.$route.params.id}`;
         axios.get(apiURL).then((res) => {
             this.skateboard = res.data
         })
@@ -91,7 +91,7 @@ export default {
             }
             this.history.baht = this.skateboard.baht;
             if (window.confirm("Do you really want to Buy?")) {
-                let apiURL = 'http://apilazado.app.ruk-com.cloud/apiHistory/create-history';
+                let apiURL = 'http://apilazado.app.ruk-com.cloud/api/create-history';
                 axios.post(apiURL, this.history).then(() => {
                 this.history = {
                     name:'',
@@ -105,7 +105,7 @@ export default {
             }).catch(error => {
                 console.log(error)
             })
-            apiURL = `http://apilazado.app.ruk-com.cloud/apiSB/update-skateboard/${this.$route.params.id}`;
+            apiURL = `http://apilazado.app.ruk-com.cloud/api/update-skateboard/${this.$route.params.id}`;
             axios.put(apiURL, this.skateboard).then((res) => {
                 console.log(res);
                 alert("Thank you for Buy")
