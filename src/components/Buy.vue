@@ -74,6 +74,11 @@ export default {
         }
     },
     created() {
+        let token = localStorage.getItem("token");
+         if (!token) {
+      alert("โปรดทำการ Login");
+      this.$router.push("/Login");
+    }
         let apiURL = `http://apilazado.app.ruk-com.cloud/apiSB/edit-skateboard/${this.$route.params.id}`;
         axios.get(apiURL).then((res) => {
             this.skateboard = res.data

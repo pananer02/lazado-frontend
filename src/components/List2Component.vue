@@ -62,11 +62,6 @@ export default {
     };
   },
   created() {
-    let token = localStorage.getItem("token");
-    if (!token) {
-      alert("โปรดทำการ Login");
-      this.$router.push("/Login");
-    }
     let apiURL = "http://apilazado.app.ruk-com.cloud/apiSB";
     axios
       .get(apiURL)
